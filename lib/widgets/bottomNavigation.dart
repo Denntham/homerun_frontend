@@ -30,9 +30,9 @@ class _BottomNavigationState extends State<BottomNavigation> {
         type: BottomNavigationBarType.shifting,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        backgroundColor: AppTheme.lightgrey,
+        backgroundColor: AppTheme.white,
         selectedItemColor: AppTheme.white,
-        unselectedItemColor: AppTheme.pink,
+        unselectedItemColor: AppTheme.darkBlue,
         elevation: 0.0,
         items: [Icons.dashboard, Icons.store, Icons.chat, Icons.account_circle]
             .asMap().map((key, value) => MapEntry(key, 
@@ -44,7 +44,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 horizontal: 16.0,
               ),
               decoration: BoxDecoration(
-                color: _currentIndex == key ? AppTheme.violet : Colors.transparent,
+                color: _currentIndex == key ? AppTheme.skyBlue : Colors.transparent,
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: Icon(value),

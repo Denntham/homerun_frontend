@@ -4,7 +4,7 @@ import 'package:frontend/resources/colorPalette.dart';
 Widget getAppBarUI() {
     return Container(
       decoration: BoxDecoration(
-        color: AppTheme.pink,
+        color: AppTheme.darkBlue,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(15.0),
           bottomRight: Radius.circular(15.0),
