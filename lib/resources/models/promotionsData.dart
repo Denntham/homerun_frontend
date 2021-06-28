@@ -1,5 +1,5 @@
-class Category {
-  Category({
+class Promotions {
+  Promotions({
     this.title = '',
     this.imagePath = '',
     this.lessonCount = 0,
@@ -13,29 +13,57 @@ class Category {
   double rating;
   String imagePath;
 
-  static List<Category> categoryList = <Category>[
-    Category(
+  static List<Promotions> PromotionsList = <Promotions>[
+    Promotions(
       imagePath: 'assets/images/interFace1.png',
       title: 'Home Cleaning Services',
       lessonCount: 24,
       money: 25,
       rating: 4.3,
     ),
-    Category(
+    Promotions(
       imagePath: 'assets/images/interFace2.png',
       title: 'Home Cleaning Services',
       lessonCount: 22,
       money: 18,
       rating: 4.6,
     ),
-    Category(
+    Promotions(
       imagePath: 'assets/images/interFace1.png',
       title: 'Home Cleaning Services',
       lessonCount: 24,
       money: 25,
       rating: 4.3,
     ),
-    Category(
+    Promotions(
+      imagePath: 'assets/images/interFace2.png',
+      title: 'Home Cleaning Services',
+      lessonCount: 22,
+      money: 18,
+      rating: 4.6,
+    ),
+    Promotions(
+      imagePath: 'assets/images/interFace1.png',
+      title: 'Home Cleaning Services',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
+    ),
+    Promotions(
+      imagePath: 'assets/images/interFace2.png',
+      title: 'Home Cleaning Services',
+      lessonCount: 22,
+      money: 18,
+      rating: 4.6,
+    ),
+    Promotions(
+      imagePath: 'assets/images/interFace1.png',
+      title: 'Home Cleaning Services',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
+    ),
+    Promotions(
       imagePath: 'assets/images/interFace2.png',
       title: 'Home Cleaning Services',
       lessonCount: 22,
@@ -44,29 +72,29 @@ class Category {
     ),
   ];
 
-  static List<Category> popularCourseList = <Category>[
-    Category(
+  static List<Promotions> popularCourseList = <Promotions>[
+    Promotions(
       imagePath: 'assets/images/interFace3.png',
       title: 'Plumbing Reparation',
       lessonCount: 12,
       money: 25,
       rating: 4.8,
     ),
-    Category(
+    Promotions(
       imagePath: 'assets/images/interFace4.png',
       title: 'Rooftop Restoration',
       lessonCount: 28,
       money: 208,
       rating: 4.9,
     ),
-    Category(
+    Promotions(
       imagePath: 'assets/images/interFace3.png',
       title: 'Plumbing Reparation',
       lessonCount: 12,
       money: 25,
       rating: 4.8,
     ),
-    Category(
+    Promotions(
       imagePath: 'assets/images/interFace4.png',
       title: 'Rooftop Restoration',
       lessonCount: 28,

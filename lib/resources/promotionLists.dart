@@ -1,17 +1,16 @@
-import 'package:frontend/main.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/resources/colorPalette.dart';
-import 'package:frontend/resources/models/category.dart';
+import 'package:frontend/resources/models/promotionsData.dart';
 
-class PopularCourseListView extends StatefulWidget {
-  const PopularCourseListView({Key? key, this.callBack}) : super(key: key);
+class PromotionList extends StatefulWidget {
+  const PromotionList({Key? key, this.callBack}) : super(key: key);
 
   final Function()? callBack;
   @override
-  _PopularCourseListViewState createState() => _PopularCourseListViewState();
+  _PromotionListState createState() => _PromotionListState();
 }
 
-class _PopularCourseListViewState extends State<PopularCourseListView>
+class _PromotionListState extends State<PromotionList>
     with TickerProviderStateMixin {
   AnimationController? animationController;
   @override
@@ -41,9 +40,9 @@ class _PopularCourseListViewState extends State<PopularCourseListView>
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.vertical,
               children: List<Widget>.generate(
-                Category.popularCourseList.length,
+                Promotions.PromotionsList.length,
                 (int index) {
-                  final int count = Category.popularCourseList.length;
+                  final int count = Promotions.PromotionsList.length;
                   final Animation<double> animation =
                       Tween<double>(begin: 0.0, end: 1.0).animate(
                     CurvedAnimation(
@@ -55,7 +54,7 @@ class _PopularCourseListViewState extends State<PopularCourseListView>
                   animationController?.forward();
                   return CategoryView(
                     callback: widget.callBack,
-                    category: Category.popularCourseList[index],
+                    category: Promotions.PromotionsList[index],
                     animation: animation,
                     animationController: animationController,
                   );
@@ -85,7 +84,7 @@ class CategoryView extends StatelessWidget {
       : super(key: key);
 
   final VoidCallback? callback;
-  final Category? category;
+  final Promotions? category;
   final AnimationController? animationController;
   final Animation<double>? animation;
 

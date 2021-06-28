@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/pages/dashboard.dart';
+import 'package:frontend/pages/marketplace.dart';
 import 'package:frontend/resources/colorPalette.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -14,10 +15,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int _currentIndex = 0;
   final List _screens = [
     Dashboard(),
-    Scaffold(),
+    Marketplace(),
     Scaffold(),
     Scaffold()
-  ];
+  ];  
   
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) => setState(() => _currentIndex = index),
-        type: BottomNavigationBarType.fixed,
+        type: BottomNavigationBarType.shifting,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         backgroundColor: AppTheme.lightgrey,
